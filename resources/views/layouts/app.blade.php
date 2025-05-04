@@ -12,7 +12,7 @@
 <body class="bg-gray-100 text-gray-900">
 
     {{-- Navbar di atas --}}
-    <x-navbar />
+    <x-navbar :username="$username ?? null" />
 
     <div class="md:flex min-h-screen">
         {{-- Main content --}}

@@ -1,5 +1,5 @@
 <header class="bg-gray-900 border-b border-gray-800 shadow-lg">
-    <div class="mx-auto max-w-screen-xl py-1 sm:px-6 lg:px-8">
+    <div class="mx-auto py-1 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <div class="md:flex md:items-center md:gap-12">
                 <a href="{{ route('dashboard') }}" class="hover:opacity-90 transition-opacity">
@@ -7,7 +7,7 @@
                 </a>
             </div>
 
-            <div class="hidden md:block">
+            <div class="hidden md:block transform translate-x-18">
                 <nav aria-label="Global">
                     <ul class="flex items-center gap-6 text-sm">
                         <li>
@@ -35,19 +35,13 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <div class="sm:flex sm:gap-4">
-                    <a class="rounded-md bg-yellow-500 px-5 py-2.5 text-sm font-medium text-gray-900 shadow-sm hover:bg-yellow-600 transition-colors"
-                        href="#">
-                        Login
-                    </a>
-
-                    <div class="hidden sm:flex">
-                        <a class="rounded-md border border-yellow-500 px-5 py-2.5 text-sm font-medium text-yellow-500 hover:bg-yellow-500/10 transition-colors"
-                            href="#">
-                            Register
-                        </a>
-                    </div>
-                </div>
+                @if ($username)
+                    <span class="text-yellow-500 font-medium border border-yellow-500 px-3 py-2 rounded-md">Welcome,
+                        {{ $username }}!</span>
+                @else
+                    <span class="text-yellow-500 font-medium border-yellow-500 px-3 py-2 rounded-md">Welcome,
+                        Guest</span>
+                @endif
 
                 <div class="block md:hidden">
                     <button

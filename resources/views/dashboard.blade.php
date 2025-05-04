@@ -10,30 +10,32 @@
                 <nav aria-label="Breadcrumb">
                     <ol class="flex justify-center items-center gap-2 text-sm">
                         <li>
-                            <a href="#" class="block transition-colors hover:text-yellow-500 font-medium">News</a>
+                            <a href="{{ route('dashboard', ['kategori' => 'news', 'username' => $username]) }}"
+                                class="block transition-colors hover:text-yellow-500 font-medium">News</a>
                         </li>
 
                         <li class="text-yellow-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="size-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m9 20.247 6-16.5" />
                             </svg>
                         </li>
 
                         <li>
-                            <a href="#" class="block transition-colors hover:text-yellow-500 font-medium">Sport</a>
+                            <a href="{{ route('dashboard', ['kategori' => 'sport', 'username' => $username]) }}"
+                                class="block transition-colors hover:text-yellow-500 font-medium">Sport</a>
                         </li>
 
                         <li class="text-yellow-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="size-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m9 20.247 6-16.5" />
                             </svg>
                         </li>
 
                         <li>
-                            <a href="#"
-                                class="block transition-colors hover:text-yellow-500 font-medium text-yellow-500">Edukasi</a>
+                            <a href="{{ route('dashboard', ['kategori' => 'edukasi', 'username' => $username]) }}"
+                                class="block transition-colors hover:text-yellow-500 font-medium">Edukasi</a>
                         </li>
                     </ol>
                 </nav>
