@@ -6,6 +6,107 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    public function getAllBerita()
+    {
+        return [
+            // --- Kategori: News ---
+            [
+                'judul' => 'Teknologi AI Terkini Mengubah Dunia',
+                'isi' => 'AI semakin mendominasi berbagai sektor.',
+                'gambar' => 'news-1.jpg',
+                'kategori' => 'news'
+            ],
+            [
+                'judul' => 'Startup Indonesia Raup Pendanaan Besar',
+                'isi' => 'Beberapa startup menarik investor global.',
+                'gambar' => 'news-2.jpeg',
+                'kategori' => 'news'
+            ],
+            [
+                'judul' => 'Ekonomi Digital Dorong UMKM Naik Kelas',
+                'isi' => 'Transformasi digital bantu bisnis lokal tumbuh.',
+                'gambar' => 'news-3.jpeg',
+                'kategori' => 'news'
+            ],
+            [
+                'judul' => 'Perkembangan Teknologi Blockchain di Asia',
+                'isi' => 'Blockchain dipakai dalam sistem keuangan dan logistik.',
+                'gambar' => 'news-4.jpeg',
+                'kategori' => 'news'
+            ],
+            [
+                'judul' => 'Pemerintah Rilis Kebijakan Startup 2025',
+                'isi' => 'Fokus pada inovasi dan inklusivitas teknologi.',
+                'gambar' => 'news-5.jpeg',
+                'kategori' => 'news'
+            ],
+
+            // --- Kategori: Sport ---
+            [
+                'judul' => 'Timnas U-23 Lolos ke Final Asia',
+                'isi' => 'Pertandingan dramatis antar negara Asia.',
+                'gambar' => 'sport-1.jpeg',
+                'kategori' => 'sport'
+            ],
+            [
+                'judul' => 'Piala Dunia U-20 Digelar di Indonesia',
+                'isi' => 'Persiapan infrastruktur berjalan lancar.',
+                'gambar' => 'sport-2.jpeg',
+                'kategori' => 'sport'
+            ],
+            [
+                'judul' => 'Atlet Indonesia Raih Emas di Olimpiade',
+                'isi' => 'Prestasi luar biasa dalam cabang bulutangkis.',
+                'gambar' => 'sport-3.jpeg',
+                'kategori' => 'sport'
+            ],
+            [
+                'judul' => 'Liga Champions: Duel Seru di Semifinal',
+                'isi' => 'Pertandingan panas antara dua raksasa Eropa.',
+                'gambar' => 'sport-4.jpeg',
+                'kategori' => 'sport'
+            ],
+            [
+                'judul' => 'Pelatih Baru Timnas Diangkat PSSI',
+                'isi' => 'Harapan baru bagi masa depan sepak bola Indonesia.',
+                'gambar' => 'sport-5.jpeg',
+                'kategori' => 'sport'
+            ],
+
+            // --- Kategori: Edukasi ---
+            [
+                'judul' => 'Belajar Efektif dengan Pomodoro',
+                'isi' => 'Teknik Pomodoro untuk fokus belajar.',
+                'gambar' => 'edukasi-1.jpeg',
+                'kategori' => 'edukasi'
+            ],
+            [
+                'judul' => 'Tips Aman Menggunakan Internet',
+                'isi' => 'Waspada terhadap phishing dan malware.',
+                'gambar' => 'edukasi-2.jpeg',
+                'kategori' => 'edukasi'
+            ],
+            [
+                'judul' => 'Platform MOOC Gratis untuk Mahasiswa',
+                'isi' => 'Belajar dari Harvard dan MIT tanpa biaya.',
+                'gambar' => 'edukasi-3.jpeg',
+                'kategori' => 'edukasi'
+            ],
+            [
+                'judul' => 'Peran Guru di Era Digital',
+                'isi' => 'Guru harus adaptif terhadap teknologi pembelajaran.',
+                'gambar' => 'edukasi-4.jpeg',
+                'kategori' => 'edukasi'
+            ],
+            [
+                'judul' => 'Mengenal Konsep Gamifikasi dalam Edukasi',
+                'isi' => 'Belajar lebih seru dengan elemen game.',
+                'gambar' => 'edukasi-5.jpeg',
+                'kategori' => 'edukasi'
+            ],
+        ];
+    }
+
     public function login()
     {
         return view('login');
@@ -39,130 +140,70 @@ class PageController extends Controller
                 'tanggal' => '2025-05-01',
                 'tags' => ['Laravel', 'PHP']
             ],
+            [
+                'judul' => 'Menguasai Tailwind CSS dalam Seminggu',
+                'tanggal' => '2025-04-29',
+                'tags' => ['Tailwind', 'CSS']
+            ],
+            [
+                'judul' => 'Perbandingan React vs Vue vs Angular',
+                'tanggal' => '2025-04-25',
+                'tags' => ['React', 'Vue', 'Angular']
+            ],
+            [
+                'judul' => 'Peluang Karir sebagai Data Scientist di 2025',
+                'tanggal' => '2025-04-22',
+                'tags' => ['Data Science', 'Karir']
+            ],
+            [
+                'judul' => 'Mengapa DevOps Penting dalam Tim Modern?',
+                'tanggal' => '2025-04-20',
+                'tags' => ['DevOps', 'Engineering']
+            ],
+            [
+                'judul' => 'AI dan Etika: Batasan yang Perlu Dijaga',
+                'tanggal' => '2025-04-18',
+                'tags' => ['AI', 'Etika']
+            ],
+            [
+                'judul' => '10 Tools Wajib untuk Web Developer',
+                'tanggal' => '2025-04-15',
+                'tags' => ['Web', 'Tools', 'Produktivitas']
+            ],
         ];
 
         return view('dashboard', compact('username', 'berita', 'trending'));
     }
 
-    // Fungsi filter kategori
     private function handleBreadcrumb($kategori = null)
     {
-        $semuaBerita = [
-            // --- Kategori: News ---
-            [
-                'judul' => 'Teknologi AI Terkini Mengubah Dunia',
-                'isi' => 'AI semakin mendominasi berbagai sektor.',
-                'gambar' => 'ai.jpg',
-                'kategori' => 'news'
-            ],
-            [
-                'judul' => 'Startup Indonesia Raup Pendanaan Besar',
-                'isi' => 'Beberapa startup menarik investor global.',
-                'gambar' => 'startup.jpg',
-                'kategori' => 'news'
-            ],
-            [
-                'judul' => 'Ekonomi Digital Dorong UMKM Naik Kelas',
-                'isi' => 'Transformasi digital bantu bisnis lokal tumbuh.',
-                'gambar' => 'umkm.jpg',
-                'kategori' => 'news'
-            ],
-            [
-                'judul' => 'Perkembangan Teknologi Blockchain di Asia',
-                'isi' => 'Blockchain dipakai dalam sistem keuangan dan logistik.',
-                'gambar' => 'blockchain.jpg',
-                'kategori' => 'news'
-            ],
-            [
-                'judul' => 'Pemerintah Rilis Kebijakan Startup 2025',
-                'isi' => 'Fokus pada inovasi dan inklusivitas teknologi.',
-                'gambar' => 'kebijakan.jpg',
-                'kategori' => 'news'
-            ],
+        $semuaBerita = $this->getAllBerita();
 
-            // --- Kategori: Sport ---
-            [
-                'judul' => 'Timnas U-23 Lolos ke Final Asia',
-                'isi' => 'Pertandingan dramatis antar negara Asia.',
-                'gambar' => 'bola.jpg',
-                'kategori' => 'sport'
-            ],
-            [
-                'judul' => 'Piala Dunia U-20 Digelar di Indonesia',
-                'isi' => 'Persiapan infrastruktur berjalan lancar.',
-                'gambar' => 'piala-dunia.jpg',
-                'kategori' => 'sport'
-            ],
-            [
-                'judul' => 'Atlet Indonesia Raih Emas di Olimpiade',
-                'isi' => 'Prestasi luar biasa dalam cabang bulutangkis.',
-                'gambar' => 'olimpiade.jpg',
-                'kategori' => 'sport'
-            ],
-            [
-                'judul' => 'Liga Champions: Duel Seru di Semifinal',
-                'isi' => 'Pertandingan panas antara dua raksasa Eropa.',
-                'gambar' => 'ucl.jpg',
-                'kategori' => 'sport'
-            ],
-            [
-                'judul' => 'Pelatih Baru Timnas Diangkat PSSI',
-                'isi' => 'Harapan baru bagi masa depan sepak bola Indonesia.',
-                'gambar' => 'pelatih.jpg',
-                'kategori' => 'sport'
-            ],
-
-            // --- Kategori: Edukasi ---
-            [
-                'judul' => 'Belajar Efektif dengan Pomodoro',
-                'isi' => 'Teknik Pomodoro untuk fokus belajar.',
-                'gambar' => 'pomodoro.jpg',
-                'kategori' => 'edukasi'
-            ],
-            [
-                'judul' => 'Tips Aman Menggunakan Internet',
-                'isi' => 'Waspada terhadap phishing dan malware.',
-                'gambar' => 'internet.jpg',
-                'kategori' => 'edukasi'
-            ],
-            [
-                'judul' => 'Platform MOOC Gratis untuk Mahasiswa',
-                'isi' => 'Belajar dari Harvard dan MIT tanpa biaya.',
-                'gambar' => 'mooc.jpg',
-                'kategori' => 'edukasi'
-            ],
-            [
-                'judul' => 'Peran Guru di Era Digital',
-                'isi' => 'Guru harus adaptif terhadap teknologi pembelajaran.',
-                'gambar' => 'guru.jpg',
-                'kategori' => 'edukasi'
-            ],
-            [
-                'judul' => 'Mengenal Konsep Gamifikasi dalam Edukasi',
-                'isi' => 'Belajar lebih seru dengan elemen game.',
-                'gambar' => 'gamifikasi.jpg',
-                'kategori' => 'edukasi'
-            ]
-        ];
-
-        // Jika tidak ada kategori, tampilkan semua
         if (!$kategori) {
             return $semuaBerita;
         }
 
-        // Jika ada kategori, filter berdasarkan itu
         return array_filter($semuaBerita, function ($item) use ($kategori) {
             return strtolower($item['kategori']) === strtolower($kategori);
         });
     }
 
-    public function pengelolaan()
+    public function pengelolaan(Request $request)
     {
-        return view('pengelolaan');
+        $username = $request->query('username');
+
+        $semuaBerita = $this->getAllBerita();
+
+        $grouped = collect($semuaBerita)->groupBy('kategori');
+
+        $jumlahPerKategori = $grouped->map(fn($item) => count($item));
+
+        return view('pengelolaan', compact('username', 'grouped', 'jumlahPerKategori'));
     }
 
-    public function profile()
+    public function profile(Request $request)
     {
-        return view('profile');
+        $username = $request->query('username');
+        return view('profile', compact('username'));
     }
 }

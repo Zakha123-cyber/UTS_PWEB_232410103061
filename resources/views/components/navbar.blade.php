@@ -1,4 +1,4 @@
-<header class="bg-gray-900 border-b border-gray-800 shadow-lg">
+<header class="bg-gray-900 border-b border-gray-800 shadow-lg fixed top-0 left-0 right-0 z-50">
     <div class="mx-auto py-1 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <div class="md:flex md:items-center md:gap-12">
@@ -11,22 +11,22 @@
                 <nav aria-label="Global">
                     <ul class="flex items-center gap-6 text-sm">
                         <li>
-                            <a class="text-gray-100 font-medium transition hover:text-yellow-500 px-3 py-2 rounded-md hover:bg-gray-800"
-                                href="#">
+                            <a class="text-gray-100 font-medium transition px-3 py-2 rounded-md hover:bg-gray-800 {{ request()->routeIs('dashboard') ? 'bg-gray-800 text-yellow-500' : 'hover:text-yellow-500' }}"
+                                href="{{ route('dashboard', ['username' => $username]) }}">
                                 Dashboard
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-100 font-medium transition hover:text-yellow-500 px-3 py-2 rounded-md hover:bg-gray-800"
-                                href="#">
+                            <a class="text-gray-100 font-medium transition px-3 py-2 rounded-md hover:bg-gray-800 {{ request()->routeIs('pengelolaan') ? 'bg-gray-800 text-yellow-500' : 'hover:text-yellow-500' }}"
+                                href="{{ route('pengelolaan', ['username' => $username]) }}">
                                 Pengelolaan
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-100 font-medium transition hover:text-yellow-500 px-3 py-2 rounded-md hover:bg-gray-800"
-                                href="#">
+                            <a class="text-gray-100 font-medium transition px-3 py-2 rounded-md hover:bg-gray-800 {{ request()->routeIs('profile') ? 'bg-gray-800 text-yellow-500' : 'hover:text-yellow-500' }}"
+                                href="{{ route('profile', ['username' => $username]) }}">
                                 Profile
                             </a>
                         </li>

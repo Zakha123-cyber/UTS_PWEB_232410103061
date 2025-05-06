@@ -14,7 +14,7 @@
     {{-- Navbar di atas --}}
     <x-navbar :username="$username ?? null" />
 
-    <div class="md:flex min-h-screen">
+    <div class="md:flex min-h-screen pt-17">
         {{-- Main content --}}
         <main class="flex-1">
             @yield('content')

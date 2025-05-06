@@ -11,7 +11,10 @@
                     <ol class="flex justify-center items-center gap-2 text-sm">
                         <li>
                             <a href="{{ route('dashboard', ['kategori' => 'news', 'username' => $username]) }}"
-                                class="block transition-colors hover:text-yellow-500 font-medium">News</a>
+                                class="block transition-colors font-medium px-2 py-1 rounded
+                               {{ request()->input('kategori') === 'news' ? ' text-yellow-500' : 'text-gray-300 hover:text-yellow-500' }}">
+                                News
+                            </a>
                         </li>
 
                         <li class="text-yellow-500">
@@ -23,7 +26,10 @@
 
                         <li>
                             <a href="{{ route('dashboard', ['kategori' => 'sport', 'username' => $username]) }}"
-                                class="block transition-colors hover:text-yellow-500 font-medium">Sport</a>
+                                class="block transition-colors font-medium px-2 py-1 rounded
+                               {{ request()->input('kategori') === 'sport' ? ' text-yellow-500' : 'text-gray-300 hover:text-yellow-500' }}">
+                                Sport
+                            </a>
                         </li>
 
                         <li class="text-yellow-500">
@@ -35,7 +41,10 @@
 
                         <li>
                             <a href="{{ route('dashboard', ['kategori' => 'edukasi', 'username' => $username]) }}"
-                                class="block transition-colors hover:text-yellow-500 font-medium">Edukasi</a>
+                                class="block transition-colors font-medium px-2 py-1 rounded
+                               {{ request()->input('kategori') === 'edukasi' ? ' text-yellow-500' : 'text-gray-300 hover:text-yellow-500' }}">
+                                Edukasi
+                            </a>
                         </li>
                     </ol>
                 </nav>
