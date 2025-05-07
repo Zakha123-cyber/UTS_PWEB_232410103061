@@ -23,7 +23,7 @@
                 @csrf
                 <div>
                     <label for="email" class="block text-yellow-500 text-sm font-medium mb-1">Username</label>
-                    <input type="email" name="username" id="email"
+                    <input name="username" id="email"
                         class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                         required>
                 </div>

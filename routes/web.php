@@ -4,7 +4,7 @@ use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    redirect()->route('login');
+    return redirect()->route('login');
 });
 
 Route::get('/login', [PageController::class, 'login'])->name('login');

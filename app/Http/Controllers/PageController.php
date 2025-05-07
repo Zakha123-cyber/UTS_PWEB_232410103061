@@ -133,42 +133,42 @@ class PageController extends Controller
             [
                 'judul' => 'Cara mudah belajar Vue.js',
                 'tanggal' => '2025-05-03',
-                'tags' => ['Vue', 'JavaScript']
+                'tags' => ['Edukasi']
             ],
             [
                 'judul' => 'Laravel 11 rilis!',
                 'tanggal' => '2025-05-01',
-                'tags' => ['Laravel', 'PHP']
+                'tags' => ['Edukasi']
             ],
             [
-                'judul' => 'Menguasai Tailwind CSS dalam Seminggu',
+                'judul' => 'Barca dibantai Inter, dan gagal menghentikan Remontada!',
                 'tanggal' => '2025-04-29',
-                'tags' => ['Tailwind', 'CSS']
+                'tags' => ['Sport']
             ],
             [
                 'judul' => 'Perbandingan React vs Vue vs Angular',
                 'tanggal' => '2025-04-25',
-                'tags' => ['React', 'Vue', 'Angular']
+                'tags' => ['Edukasi']
             ],
             [
                 'judul' => 'Peluang Karir sebagai Data Scientist di 2025',
                 'tanggal' => '2025-04-22',
-                'tags' => ['Data Science', 'Karir']
+                'tags' => ['News']
             ],
             [
                 'judul' => 'Mengapa DevOps Penting dalam Tim Modern?',
                 'tanggal' => '2025-04-20',
-                'tags' => ['DevOps', 'Engineering']
+                'tags' => ['News']
             ],
             [
                 'judul' => 'AI dan Etika: Batasan yang Perlu Dijaga',
                 'tanggal' => '2025-04-18',
-                'tags' => ['AI', 'Etika']
+                'tags' => ['News']
             ],
             [
                 'judul' => '10 Tools Wajib untuk Web Developer',
                 'tanggal' => '2025-04-15',
-                'tags' => ['Web', 'Tools', 'Produktivitas']
+                'tags' => ['Edukasi']
             ],
         ];
 
