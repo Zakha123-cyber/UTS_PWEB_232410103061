@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/username/repo-name/main/public/images/logo-z-news.png" alt="Z News Logo" width="200">
+  <img src="public/images/logo-z-news.png" alt="Z News Logo" width="300">
 </p>
 
 <h1 align="center">Z News - Portal Berita Laravel</h1>
@@ -24,11 +24,11 @@ Z News adalah sebuah aplikasi portal berita sederhana berbasis Laravel yang memi
 
 ### 👤 Profile
 - Menampilkan informasi user (username) yang diambil dari data login.
-- Disusun dengan tampilan sederhana namun informatif.
+- Disusun dengan tampilan sederhana namun informatif(data dummy).
 
 ## 💻 Teknologi yang Digunakan
 
-- **Laravel** (versi terbaru)
+- **Laravel** (versi 12)
 - **Blade Templating**
 - **Tailwind CSS** untuk styling modern dan responsif
 - **Routing Laravel** untuk navigasi halaman
