@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <div class="bg-gray-900 min-h-screen text-gray-100 pt-10"> <!-- Added pt-20 for fixed navbar -->
+    <div class="bg-gray-900 min-h-screen text-gray-100 pt-10">
         <!-- Breadcrumb Section -->
         <div class="bg-gray-800/80 backdrop-blur-sm sticky top-18 z-40 border-b border-gray-700/50">
             <div class="container mx-auto px-4">
